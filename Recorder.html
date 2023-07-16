@@ -3,8 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link rel="shortcut icon" type="image/png" href="images/icon.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" type="image/png" href="image/icon.png">
 <title>Recorder H5</title>
 <script>
 var Tips=unescape("%uD83D%uDE04");
@@ -399,23 +398,6 @@ a:hover{
 	border-radius: 99px;
 }
 </style>
-
-<script>
-window.addEventListener('load', async e => {
-    await fetchTrending();
-
-    if ('serviceWorker' in navigator) {
-        try {
-            navigator.serviceWorker.register('service-Worker.js');
-            console.log('SW registered');
-
-        } catch (error) {
-            console.log('SW failed');
-
-        }
-    }
-});
-</script>
 
 </body>
 </html>
