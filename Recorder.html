@@ -176,7 +176,7 @@ function recStop(){
 		console.log(blob,(window.URL||webkitURL).createObjectURL(blob),"时长:"+duration+"ms");
 
 		recBlob=blob;
-		reclog("已录制wav："+formatMs(duration)+"ms "+blob.size+"字节，可以点击播放、上传、本地下载了",2);
+		reclog("已录制wav："+formatMs(duration)+"ms "+blob.size+"字节，可以点击播放、本地下载了",2);
 	},function(msg){
 		reclog("录音失败:"+msg,1);
 	});
@@ -218,7 +218,7 @@ function recLocalDown(){
 	downA.download=fileName;
 	document.querySelector("."+cls).appendChild(downA);
 	if(/mobile/i.test(navigator.userAgent)){
-		alert("因移动端绝大部分国产浏览器未适配Blob Url的下载，所以本demo代码在移动端未调用downA.click()。请尝试点击日志中显示的下载链接下载");
+		alert("因移动端绝大部分国产浏览器未适配Blob Url的下载，所以在移动端未调用downA.click()。请尝试点击日志中显示的下载链接下载");
 	}else{
 		downA.click();
 	}
@@ -276,13 +276,6 @@ var formatMs=function(ms,all){
 };
 </script>
 
-
-
-
-
-
-
-
 <!--以下这坨可以忽略-->
 <script>
 function reclog(s,color){
@@ -318,8 +311,6 @@ if(window.Recorder){
 }
 </script>
 
-<!-->
-
 <script>
 if(/mobile/i.test(navigator.userAgent)){
 	//移动端加载控制台组件
@@ -332,7 +323,6 @@ if(/mobile/i.test(navigator.userAgent)){
 	};
 };
 </script>
-<!-->
 
 <style>
 body{
